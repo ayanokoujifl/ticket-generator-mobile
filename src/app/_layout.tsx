@@ -2,11 +2,25 @@ import { SafeAreaView, StatusBar } from "react-native"
 import { Slot } from "expo-router"
 import "../global.css"
 
+import {
+  useFonts,
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from "@expo-google-fonts/roboto"
+import { Loading } from "@/components/Loading"
+
 export default function Layout() {
+  const fontsLoaded = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold,
+  })
+
   return (
     <SafeAreaView className="flex-1 pt-10 bg-green-500">
-      <StatusBar translucent />
-      <Slot />
+      <StatusBar translucent barStyle={"light-content"} />
+      {fontsLoaded ? <Slot /> : <Loading />}
     </SafeAreaView>
   )
 }
