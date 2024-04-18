@@ -9,6 +9,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/roboto"
 import Ticket from "./ticket"
+import { Slot } from "expo-router"
 
 export default function Layout() {
   const fontsLoaded = useFonts({

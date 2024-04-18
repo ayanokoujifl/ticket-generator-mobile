@@ -1,4 +1,4 @@
-import { Alert, Image, Text, View } from "react-native"
+import { Alert, Image, StatusBar, Text, View } from "react-native"
 import Logo from "@/assets/logo.png"
 import { Input } from "@/components/Input"
 import { colors } from "../styles/colors"
@@ -18,6 +18,8 @@ export default function Home() {
 
   return (
     <View className="flex-1 justify-center items-center p-8">
+      <StatusBar translucent barStyle={"light-content"} />
+
       <Image source={Logo} className="h-16" resizeMode="contain" />
       <View className="w-full mt-12 gap-3">
         <Input>

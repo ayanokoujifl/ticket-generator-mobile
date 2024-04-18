@@ -4,7 +4,7 @@ import {
   MaterialCommunityIcons,
   MaterialIcons,
 } from "@expo/vector-icons"
-import { Alert, Image, View } from "react-native"
+import { Alert, Image, StatusBar, View } from "react-native"
 import Logo from "@/assets/logo.png"
 import colors from "tailwindcss/colors"
 import { Button } from "@/components/Button"
@@ -24,6 +24,8 @@ export default function Register() {
 
   return (
     <View className="flex-1 justify-center items-center p-8">
+      <StatusBar translucent barStyle={"light-content"} />
+
       <Image source={Logo} className="h-16" resizeMode="contain" />
       <View className="w-full mt-12 gap-3">
         <Input>
